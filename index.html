@@ -1,0 +1,499 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insight PS - Driveways, Paving & Roofing - Manchester & North West</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181c; --mut:#57616c; --line:#e2e6ec; --bg:#f8fafb; --panel:#fff;
+  --deep:#12283f; --deep2:#1d3b58; --acc:#2f6fbf; --acc2:#7fb4e3; --ok:#1f7a45;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Bitter,Georgia,serif;font-weight:700;line-height:1.16;letter-spacing:-.014em;text-wrap:balance}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.demobar{background:#0d1117;color:#e6edf3;font-size:12.5px;text-align:center;padding:8px 14px}
+.demobar b{color:#f0b13c}
+.urg{background:#8a1c1c;color:#fff;text-align:center;font-size:13.5px;padding:9px;font-weight:500}
+.urg a{color:#fff}
+nav{position:sticky;top:0;z-index:60;background:rgba(248,250,251,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.logo{font-family:Bitter,serif;font-weight:700;font-size:19px}
+.logo span{color:var(--acc)}
+.navl{display:flex;gap:20px;font-size:14.5px;font-weight:500}
+.navl a{color:var(--mut);text-decoration:none}.navl a:hover{color:var(--deep2)}
+.navl a.on{color:var(--deep2);font-weight:700}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--deep2);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 17px;border-radius:8px;white-space:nowrap}
+@media(max-width:900px){.navl{display:none}}
+.hero{position:relative;background:linear-gradient(155deg,var(--deep),var(--deep2));color:#eef3f8;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;opacity:.13;
+  background:repeating-linear-gradient(78deg,transparent 0 38px,rgba(255,255,255,.55) 38px 40px),
+             repeating-linear-gradient(-12deg,transparent 0 38px,rgba(255,255,255,.3) 38px 39px)}
+.heroin{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:42px;align-items:center;padding:56px 0 62px}
+@media(max-width:980px){.heroin{grid-template-columns:1fr;gap:28px;padding:38px 0 44px}}
+.eyeb{display:inline-block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--acc2);border:1px solid rgba(255,255,255,.28);padding:5px 12px;border-radius:999px;margin-bottom:17px}
+.hero h1{font-size:clamp(31px,5vw,48px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--acc2)}
+.hero .lede{font-size:17px;color:#c6d3df;max-width:520px}
+.ticks{list-style:none;margin-top:20px;display:grid;gap:9px}
+.ticks li{display:flex;gap:10px;font-size:15.5px;color:#dde6ee}
+.ticks svg{flex:0 0 18px;margin-top:4px;fill:var(--acc2)}
+.form{background:var(--panel);border-radius:14px;padding:24px;box-shadow:0 20px 54px rgba(0,0,0,.3);color:var(--ink)}
+.form h3{font-size:20px;margin-bottom:4px}
+.form .fs{font-size:13.5px;color:var(--mut);margin-bottom:14px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin:12px 0 5px}
+select,input{width:100%;font-family:inherit;font-size:15px;color:var(--ink);background:#fbfcfd;border:1px solid var(--line);border-radius:8px;padding:11px 12px}
+select:focus,input:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+.chk{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chk label{display:inline-flex;align-items:center;gap:7px;margin:0;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fbfcfd;font-size:13.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);cursor:pointer}
+.chk input{width:auto;padding:0;margin:0}
+.btn{width:100%;margin-top:18px;background:var(--acc);color:#fff;border:0;border-radius:9px;padding:14px;font-family:Bitter,serif;font-size:16px;font-weight:700;cursor:pointer}
+.btn:hover{filter:brightness(.88)}
+.hint{font-size:12px;color:var(--mut);margin-top:10px;text-align:center}
+.out{display:none;margin-top:15px;border-radius:10px;padding:15px 16px;font-size:14.5px;border:1px solid}
+.out.show{display:block}
+.out b{display:block;font-family:Bitter,serif;font-size:16.5px;margin-bottom:5px}
+.o-hi{background:#eef6f0;border-color:#bedcc6;color:#1d5734}
+.o-md{background:#fdf6ea;border-color:#ecdcb2;color:#775413}
+.o-lo{background:#f3f5f7;border-color:#dde2e7;color:#48515a}
+.o-urg{background:#fdeeee;border-color:#f0c6c4;color:#8a1c1c}
+.trust{background:#0e141a;color:#b6c2cd;padding:15px 0}
+.trustin{display:flex;flex-wrap:wrap;justify-content:center;gap:11px 34px;font-size:13.5px}
+.trustin b{color:var(--acc2);font-weight:700}
+section{padding:58px 0}
+.sh{text-align:center;max-width:680px;margin:0 auto 34px}
+.sh .kick{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:10px}
+.sh h2{font-size:clamp(25px,3.4vw,33px);margin-bottom:11px}
+.sh p{color:var(--mut);font-size:16.5px}
+.band{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:17px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden}
+.ctop{height:100px;position:relative;background:linear-gradient(140deg,var(--deep),var(--deep2))}
+.ctop::after{content:"";position:absolute;inset:0;opacity:.24;background:repeating-linear-gradient(78deg,transparent 0 15px,rgba(255,255,255,.5) 15px 16px)}
+.cbody{padding:17px}.cbody h3{font-size:18px;margin-bottom:6px}
+.cbody p{font-size:14.5px;color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:24px}
+.box.pri{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#eef3f8;border-color:var(--deep2)}
+.box h3{font-size:20px;margin-bottom:10px}
+.box ul{margin:0 0 0 19px;font-size:15px;color:var(--mut)}
+.box.pri ul{color:#c6d3df}
+.box li{margin-bottom:8px}
+.tagp{display:inline-block;font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;background:var(--acc2);color:#0e1a26;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:16px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.fact .k{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:7px}
+.fact .v{font-family:Bitter,serif;font-size:22px;font-weight:700;color:var(--deep2)}
+.fact .n{font-size:13.5px;color:var(--mut);margin-top:5px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:22px;counter-reset:s}
+.step{counter-increment:s;position:relative;padding-left:50px}
+.step::before{content:counter(s);position:absolute;left:0;top:0;width:37px;height:37px;border-radius:50%;background:var(--deep2);color:#fff;font-family:Bitter,serif;font-weight:700;font-size:17px;display:grid;place-items:center}
+.step h3{font-size:17.5px;margin-bottom:5px}.step p{font-size:14.5px;color:var(--mut)}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:17px}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:20px}
+.stars{color:#e0a32e;font-size:15.5px;letter-spacing:2px}
+.rev p{font-size:14.8px;color:var(--mut);margin:9px 0 12px;font-style:italic}
+.rev .who{font-size:13.5px;font-weight:700}
+.rev .who span{display:block;font-weight:400;color:var(--mut);font-size:12.5px;margin-top:2px}
+.ratebar{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.ratebig{font-family:Bitter,serif;font-size:42px;font-weight:700;color:var(--deep2)}
+.ratetxt{font-size:14.5px;color:var(--mut);text-align:left}
+.badges{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.bdg{background:var(--panel);border:1px dashed #b9c3d1;border-radius:11px;padding:14px 20px;text-align:center;min-width:140px}
+.bdg b{display:block;font-family:Bitter,serif;font-size:16px;color:var(--deep2)}
+.bdg span{font-size:11.5px;color:var(--mut);letter-spacing:.05em;text-transform:uppercase}
+.areas{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:20px}
+.areas span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;color:var(--mut)}
+.cta2{background:linear-gradient(155deg,var(--deep),var(--deep2));color:#eef3f8;text-align:center;padding:58px 0}
+.cta2 h2{font-size:clamp(25px,3.4vw,33px);margin-bottom:11px}
+.cta2 p{color:#c6d3df;font-size:16.5px;max-width:560px;margin:0 auto 22px}
+.cta2 .call{font-size:16px;padding:14px 26px;background:var(--acc2);color:#0e1a26}
+footer{background:#0b1016;color:#87929d;font-size:13.5px;padding:32px 0}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+footer h4{color:#e7edf3;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:10px}
+footer a{color:#87929d;text-decoration:none;display:block;margin-bottom:6px}
+footer a:hover{color:var(--acc2)}
+.fnote{border-top:1px solid #1b232c;padding-top:18px;margin-top:20px;font-size:12.5px;color:#6b7681;line-height:1.65}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+</style>
+<style>
+.hero{background:linear-gradient(150deg,rgba(10,24,20,.94),rgba(18,48,38,.80)),url('img/hero.jpg') center 55%/cover}
+.hero::after{opacity:.05}
+.ctop{background-size:cover;background-position:center;height:190px}
+@media(max-width:700px){.ctop{height:160px}}
+.ctop::after{opacity:.1}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:13px}
+.gal div{aspect-ratio:7/5;border-radius:12px;background-size:cover;background-position:center;border:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+@media(max-width:820px){.split{grid-template-columns:1fr;gap:22px}}
+.split .pic{aspect-ratio:7/5;border-radius:14px;background-size:cover;background-position:center}
+.cta2{background:linear-gradient(150deg,rgba(10,24,20,.94),rgba(18,48,38,.86)),url('img/block.jpg') center 55%/cover}
+.nicei{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:7px 13px;font-size:13.5px;font-weight:600;margin-top:16px}
+.faqs{max-width:820px;margin:0 auto}
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:600;font-size:16px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--acc);font-weight:400;line-height:1}
+.faq[open] summary::after{content:"\2212"}
+.faq p{padding:0 18px 16px;color:var(--mut);font-size:15px;margin:0}
+.callbar{display:none}
+@media(max-width:820px){
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--deep2);color:#fff;align-items:center;justify-content:center;gap:10px;padding:13px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.28)}
+ body{padding-bottom:56px}
+}
+</style>
+
+<div class="demobar">This is a <b>concept website</b> built by AG1 Consulting for Insight PS Limited. It is not a live site and no form on it sends anywhere.</div>
+
+<nav>
+  <div class="wrap navin">
+    <div class="logo">Insight <span>PS</span></div>
+    <div class="navl">
+      <a href="#driveways" class="on">Driveways</a>
+      <a href="#roofing">Roofing</a>
+      <a href="#landscaping">Landscaping</a>
+      <a href="#areas">Areas</a>
+      <a href="#careers">Join Us</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="call" href="tel:+441615248773">&#9742; 0161 524 8773</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap heroin">
+    <div>
+      <div class="eyeb">Manchester &amp; the North West &middot; 25+ Years &middot; Checkatrade Members</div>
+      <h1>A driveway is groundworks with a nice top on it. <em>Most firms only do the top.</em></h1>
+      <p class="lede">Block paving, resin bound, tarmac and Indian sandstone across Manchester and the
+      North West &mdash; plus the roofing, brickwork and groundworks that go with a property being
+      properly looked after. Over twenty-five years of it.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>Checkatrade members &mdash; and we have been for a long time</span></li>
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>The sub-base done properly, which is why the drive stays flat</span></li>
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>Free, written, no-obligation estimates</span></li>
+        <li><svg viewBox="0 0 20 20" width="18" height="18"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span>Ground to roof &mdash; driveways, groundworks, brickwork and roofing</span></li>
+      </ul>
+      <div class="nicei">&#9873; Fully insured &middot; Manchester &amp; North West</div>
+    </div>
+
+    <form class="form" id="quote" onsubmit="return route(event)">
+      <h3>Get a free estimate</h3>
+      <div class="fs">Tell us what you are thinking about and we will tell you what is actually involved.</div>
+
+      <label for="job">What do you need?</label>
+      <select id="job">
+        <option value="">Choose one&hellip;</option>
+        <option value="block">Block paving driveway</option>
+        <option value="resin">Resin bound driveway</option>
+        <option value="tarmac">Tarmac driveway</option>
+        <option value="patio">Patio or Indian sandstone</option>
+        <option value="roof">Roofing work</option>
+        <option value="ground">Groundworks or site preparation</option>
+        <option value="garden">Fencing, turf or garden design</option>
+        <option value="job">I am looking for work with you</option>
+      </select>
+
+      <label for="size">Roughly how big?</label>
+      <select id="size">
+        <option value="">Choose one&hellip;</option>
+        <option value="s">Small &mdash; one or two cars</option>
+        <option value="m">Medium &mdash; a full frontage</option>
+        <option value="l">Large &mdash; driveway and garden</option>
+        <option>Not sure yet</option>
+      </select>
+
+      <label>When are you thinking?</label>
+      <div class="chk">
+        <label><input type="radio" name="u" checked> Getting prices</label>
+        <label><input type="radio" name="u"> Next few weeks</label>
+        <label><input type="radio" name="u"> As soon as possible</label>
+      </div>
+
+      <label for="town">Your town</label>
+      <input id="town" placeholder="Altrincham, Bolton, Oldham&hellip;">
+
+      <label for="ph">Best number to reach you</label>
+      <input id="ph" placeholder="07000 000000">
+
+      <button class="btn" type="submit">Request an estimate</button>
+      <div class="hint">We will tell you honestly if what you want is not the right answer for the space.</div>
+
+      <div class="out" id="out"></div>
+    </form>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap trustin">
+    <div><b>25+ years</b> experience</div>
+    <div><b>Checkatrade</b> members</div>
+    <div><b>61 towns</b> across the North West</div>
+    <div><b>Free</b> written estimates</div>
+    <div><b>Fully</b> insured</div>
+  </div>
+</div>
+
+<section id="driveways">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Driveways</div>
+      <h2>Four surfaces, and an honest answer about which one suits you</h2>
+      <p>They are not interchangeable. The right one depends on the slope, the drainage, how many cars and what you want it to look like in ten years.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ctop" style="background-image:url('img/block.jpg')"></div><div class="cbody">
+        <h3>Block paving</h3>
+        <p>The most repairable surface there is &mdash; lift a few blocks, fix what is underneath, put them back. Good for heavy use and awkward shapes.</p></div></div>
+      <div class="card"><div class="ctop" style="background-image:url('img/resin.jpg')"></div><div class="cbody">
+        <h3>Resin bound</h3>
+        <p>Seamless, permeable and smooth underfoot. Needs a sound base beneath it, which is where most poor resin jobs go wrong.</p></div></div>
+      <div class="card"><div class="ctop" style="background-image:url('img/tarmac.jpg')"></div><div class="cbody">
+        <h3>Tarmac</h3>
+        <p>Fast to lay, hard wearing and the best value per square metre on a long or wide drive.</p></div></div>
+      <div class="card"><div class="ctop" style="background-image:url('img/patio.jpg')"></div><div class="cbody">
+        <h3>Indian sandstone patios</h3>
+        <p>Natural stone, laid on a full mortar bed with the falls set so water leaves rather than sits.</p></div></div>
+      <div class="card"><div class="ctop" style="background-image:url('img/g1.jpg')"></div><div class="cbody">
+        <h3>Paving repairs &amp; maintenance</h3>
+        <p>Sinking, weeds, loose blocks and failed edgings. Usually a repair, not a replacement &mdash; and we will say so.</p></div></div>
+      <div class="card"><div class="ctop" style="background-image:url('img/g2.jpg')"></div><div class="cbody">
+        <h3>Groundworks &amp; site preparation</h3>
+        <p>Dig-outs, sub-bases, drainage and levels. The part nobody sees and the part that decides everything.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="roofing">
+  <div class="wrap">
+    <div class="split">
+      <div class="pic" style="background-image:url('img/g3.jpg')"></div>
+      <div>
+        <div class="kick" style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:10px">Roofing</div>
+        <h2 style="font-size:clamp(25px,3.4vw,33px);margin-bottom:12px">Our skills extend from the ground to the roof.</h2>
+        <p style="color:var(--mut);font-size:16.5px;margin-bottom:14px">Most people know us for driveways.
+        We also work on the other end of the building &mdash; and on a lot of properties both jobs need
+        doing at once, by people who are already on site and already insured to be there.</p>
+        <ul class="ticks" style="color:var(--ink)">
+          <li><svg viewBox="0 0 20 20" width="18" height="18" style="fill:var(--acc)"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span style="color:var(--ink)">Roof repairs and replacement</span></li>
+          <li><svg viewBox="0 0 20 20" width="18" height="18" style="fill:var(--acc)"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span style="color:var(--ink)">Brickwork, garden walls and structural repairs</span></li>
+          <li><svg viewBox="0 0 20 20" width="18" height="18" style="fill:var(--acc)"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span style="color:var(--ink)">Drainage that connects the roof to the ground properly</span></li>
+          <li><svg viewBox="0 0 20 20" width="18" height="18" style="fill:var(--acc)"><path d="M7.6 14.2 3.4 10l1.4-1.4 2.8 2.8 7.6-7.6L16.6 5z"/></svg><span style="color:var(--ink)">One contractor, one point of contact, one set of scaffolding</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="landscaping">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Landscaping</div>
+      <h2>The rest of the outside</h2>
+    </div>
+    <div class="badges">
+      <div class="bdg"><b>Garden design</b><span>Planned properly</span></div>
+      <div class="bdg"><b>Fencing</b><span>Posts set to last</span></div>
+      <div class="bdg"><b>Turfing &amp; lawns</b><span>Prepared, not just rolled out</span></div>
+      <div class="bdg"><b>Artificial grass</b><span>With drainage beneath</span></div>
+      <div class="bdg"><b>Brickwork</b><span>Walls and edgings</span></div>
+      <div class="bdg"><b>Drainage</b><span>Where the water goes</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">How we work</div>
+      <h2>Four steps, and the honest conversation happens at step two</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>We come and look</h3><p>Levels, drainage, access and what is already under there. You cannot price a drive from a photograph.</p></div>
+      <div class="step"><h3>We tell you what it needs</h3><p>Including when the surface you asked for is the wrong one for the ground you have.</p></div>
+      <div class="step"><h3>A written estimate</h3><p>Free, no obligation, and itemised so you can see what is base and what is surface.</p></div>
+      <div class="step"><h3>We do the groundwork first</h3><p>Because the part you never see is the part that decides whether it is still flat in ten years.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Our work</div>
+      <h2>Real driveways in real Manchester streets</h2>
+      <p>Every picture on this page is our own work on our own jobs.</p>
+    </div>
+    <div class="gal">
+      <div style="background-image:url('img/hero.jpg')"></div>
+      <div style="background-image:url('img/block.jpg')"></div>
+      <div style="background-image:url('img/resin.jpg')"></div>
+      <div style="background-image:url('img/tarmac.jpg')"></div>
+      <div style="background-image:url('img/patio.jpg')"></div>
+      <div style="background-image:url('img/g2.jpg')"></div>
+      <div style="background-image:url('img/g4.jpg')"></div>
+      <div style="background-image:url('img/g5.jpg')"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="careers">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Join the team</div>
+      <h2>We are looking for groundworkers and pavers.</h2>
+      <p>If you take the base seriously you will fit in here. If you do not, you will not.</p>
+    </div>
+    <div class="two">
+      <div class="box pri">
+        <div class="tagp">Who we want</div>
+        <h3>Experienced hands and improvers</h3>
+        <ul>
+          <li>Block paving, resin, tarmac or groundworks experience</li>
+          <li>People who dig it out properly when nobody is watching</li>
+          <li>Improvers who want to be shown how, not just handed a shovel</li>
+          <li>Across Manchester and the North West</li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="tagp">Why here</div>
+        <h3>What you would be joining</h3>
+        <ul>
+          <li>Over twenty-five years of work and a long Checkatrade record</li>
+          <li>Steady work across sixty-one towns, not one small patch</li>
+          <li>Driveways, groundworks, brickwork and roofing &mdash; varied, not repetitive</li>
+          <li>A firm that quotes honestly, so you are not sent to defend a bad price</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:26px">
+      <a class="call" href="tel:+441615248773" style="font-size:18px">&#9742; Call 0161 524 8773</a>
+      <p style="color:var(--mut);margin-top:12px;font-size:15px">A name and a number is enough to start a conversation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Straight answers</div>
+      <h2>What homeowners ask us</h2>
+    </div>
+    <div class="faqs">
+      <details class="faq"><summary>Which driveway material is best for my property?</summary><p>It depends on the slope, the drainage and how the drive is used. Block paving is the most repairable, resin is the smoothest and most permeable, tarmac is the best value over a large area, and sandstone is for patios rather than parking. We will tell you which suits your ground rather than which we would rather lay.</p></details>
+      <details class="faq"><summary>How long will the work take?</summary><p>A typical domestic driveway is a matter of days rather than weeks, but it depends on the dig-out, the drainage and the weather. We give you a realistic window at estimate stage, not an optimistic one.</p></details>
+      <details class="faq"><summary>Why does the sub-base matter so much?</summary><p>Because nearly every failed driveway failed underneath, not on top. Sinking, rutting and standing water are almost always a base or drainage problem showing through the surface. It is the part of the job you never see and the part worth paying for.</p></details>
+      <details class="faq"><summary>Are you insured, and are you checked?</summary><p>Yes, fully insured, and we are Checkatrade members. If you want to see the paperwork before we start, ask &mdash; that is a reasonable thing to want.</p></details>
+      <details class="faq"><summary>Will you tidy up afterwards?</summary><p>Yes. The site goes back cleaner than we found it, and waste goes with us rather than sitting on your verge waiting for a skip.</p></details>
+      <details class="faq"><summary>Do you really do roofing as well as driveways?</summary><p>Yes. Our skills extend from the ground to the roof, and on a lot of properties both need attention at the same time. One contractor, one point of contact.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Areas we cover</div>
+      <h2>Manchester and across the North West</h2>
+    </div>
+    <div class="areas">
+      <span>Manchester</span><span>Altrincham</span><span>Ashton-under-Lyne</span><span>Bolton</span>
+      <span>Bramhall</span><span>Bury</span><span>Cheadle</span><span>Cheadle Hulme</span>
+      <span>Chorlton</span><span>Denton</span><span>Droylsden</span><span>Eccles</span>
+      <span>Failsworth</span><span>Glossop</span><span>Hale</span><span>Knutsford</span>
+      <span>Oldham</span><span>Sale</span><span>Stockport</span><span>Stretford</span>
+      <span>Urmston</span><span>Walkden</span><span>Whitefield</span><span>Worsley</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta2">
+  <div class="wrap">
+    <h2>Get it dug out properly once, rather than relaid twice.</h2>
+    <p>Free written estimates across Manchester and the North West.</p>
+    <a class="call" href="tel:+441615248773">&#9742; Call 0161 524 8773</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Insight PS</h4>
+        <a href="tel:+441615248773">0161 524 8773</a>
+        <a href="#top">office@insightps.co.uk</a>
+        <a href="#top">Manchester &amp; North West</a>
+      </div>
+      <div>
+        <h4>Driveways</h4>
+        <a href="#driveways">Block paving</a>
+        <a href="#driveways">Resin bound</a>
+        <a href="#driveways">Tarmac</a>
+        <a href="#driveways">Repairs &amp; maintenance</a>
+      </div>
+      <div>
+        <h4>Property</h4>
+        <a href="#roofing">Roofing</a>
+        <a href="#roofing">Brickwork &amp; walls</a>
+        <a href="#driveways">Groundworks</a>
+        <a href="#landscaping">Drainage</a>
+      </div>
+      <div>
+        <h4>Garden</h4>
+        <a href="#landscaping">Garden design</a>
+        <a href="#landscaping">Fencing</a>
+        <a href="#landscaping">Turfing &amp; lawns</a>
+        <a href="#landscaping">Artificial grass</a>
+      </div>
+    </div>
+    <div class="fnote">
+      <b>Concept demonstration &mdash; not a live website.</b> This page was produced by AG1 Consulting
+      to show Insight PS Limited one way their website could work. No form on this page submits
+      anywhere and the instant response shown is a demonstration of routing only &mdash; it is not a
+      quotation, an estimate or an offer. The company name, telephone number, email address, the
+      service list, the twenty-five-plus years of experience, the Checkatrade membership, the towns
+      covered and all photography are taken from Insight PS's own published website and remain their
+      property. <b>The four-step process, the service descriptions, the FAQ answers and the entire
+      recruitment section are illustrative wording written by AG1 to demonstrate the layout &mdash;
+      none of it has been confirmed with Insight PS, the company does not currently advertise any
+      vacancy on its website, and none of it should be read as a commitment the business has made or
+      as an actual job advertisement.</b> No rate of pay, employment term or benefit is stated or
+      implied anywhere on this page. The roofing section reflects services Insight PS describes on its
+      own homepage; <b>the specific roofing capabilities listed are illustrative and have not been
+      confirmed.</b> <b>No prices, ratings, review counts or customer testimonials appear anywhere on
+      this page</b>, and no accreditation beyond the memberships Insight PS references itself is
+      claimed. Checkatrade and TrustMark are the property of their respective owners and neither has
+      endorsed this page.
+    </div>
+  </div>
+</footer>
+
+<script>
+function route(e){
+  e.preventDefault();
+  var j=document.getElementById('job').value,
+      s=document.getElementById('size').value,
+      o=document.getElementById('out'),
+      t=(document.getElementById('town').value||'your area').trim().replace(/[<>]/g,'');
+  var m={
+    block:['o-hi','Block paving estimate','The most repairable surface there is. We will check the dig-out depth and the drainage before we price it.'],
+    resin:['o-hi','Resin bound estimate','Resin needs a sound base underneath. If yours is not sound we will tell you before you spend the money, not after.'],
+    tarmac:['o-hi','Tarmac estimate','Best value per square metre on a long or wide drive. We will check the falls so water leaves the surface.'],
+    patio:['o-hi','Patio estimate','Natural stone laid on a full mortar bed, with the falls set properly so it does not hold water.'],
+    roof:['o-hi','Roofing enquiry','Our skills extend from the ground to the roof. Tell us what it is doing and roughly how old it is.'],
+    ground:['o-md','Groundworks enquiry','Dig-outs, sub-bases, levels and drainage. Tell us the site and what has to go on top of it afterwards.'],
+    garden:['o-md','Landscaping enquiry','Fencing, turf, artificial grass or a full garden design. We will come and look at the levels.'],
+    job:['o-hi','Good &mdash; we are hiring','Ring 0161 524 8773. A name and a number is enough; we can talk about the rest on the phone.']
+  };
+  var r=m[j]||['o-lo','Enquiry received','Tell us about the space when we call and we will come prepared.'];
+  var extra='';
+  if(s==='l') extra=' <span style="display:block;margin-top:8px">On a larger job we will usually phase the work so you keep access to the property throughout.</span>';
+  else if(s==='s') extra=' <span style="display:block;margin-top:8px">Smaller jobs still get the same base preparation. That is the bit that decides how long it lasts.</span>';
+  o.className='out show '+r[0];
+  o.innerHTML='<b>'+r[1]+'</b>'+r[2]+extra+'<span style="display:block;margin-top:8px;opacity:.85">Covering '+t+' &mdash; 0161 524 8773</span>';
+  o.scrollIntoView({behavior:'smooth',block:'nearest'});
+  return false;
+}
+</script>
+
+<a class="callbar" href="tel:+441615248773">&#9742; Call 0161 524 8773</a>
